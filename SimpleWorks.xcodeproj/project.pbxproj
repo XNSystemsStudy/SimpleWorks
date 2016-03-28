@@ -105,6 +105,8 @@
 		759169671C9BF20E00BD4116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A49BD41C928F97008091C0 /* UserEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEditController.swift; sourceTree = "<group>"; };
 		75B045621C96B23000C06775 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		75FE60B81CA8C91000A8646E /* SimpleWorks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SimpleWorks.entitlements; sourceTree = "<group>"; };
+		75FE60B91CA8C9F300A8646E /* SimpleWorksWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SimpleWorksWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		758BFFB01C75550A00CC8544 /* SimpleWorks */ = {
 			isa = PBXGroup;
 			children = (
+				75FE60B81CA8C91000A8646E /* SimpleWorks.entitlements */,
 				758BFFB11C75550A00CC8544 /* AppDelegate.swift */,
 				758BFFB31C75550A00CC8544 /* ViewController.swift */,
 				758BFFB51C75550A00CC8544 /* Main.storyboard */,
@@ -206,6 +209,7 @@
 		759169611C9BF20E00BD4116 /* SimpleWorksWidget */ = {
 			isa = PBXGroup;
 			children = (
+				75FE60B91CA8C9F300A8646E /* SimpleWorksWidget.entitlements */,
 				759169621C9BF20E00BD4116 /* TodayViewController.swift */,
 				759169641C9BF20E00BD4116 /* MainInterface.storyboard */,
 				759169671C9BF20E00BD4116 /* Info.plist */,
@@ -310,6 +314,11 @@
 					758BFFAD1C75550A00CC8544 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = V9BXH6Q37J;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					758BFFC41C75550A00CC8544 = {
 						CreatedOnToolsVersion = 7.2;
@@ -322,6 +331,11 @@
 					7591695E1C9BF20E00BD4116 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = V9BXH6Q37J;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -554,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SimpleWorks/SimpleWorks.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -563,7 +578,7 @@
 				);
 				INFOPLIST_FILE = SimpleWorks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tv.xnrnd.sample.SimpleWorks;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.xnrnd.sample.SimpleWorks1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -575,6 +590,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SimpleWorks/SimpleWorks.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -584,7 +600,7 @@
 				);
 				INFOPLIST_FILE = SimpleWorks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tv.xnrnd.sample.SimpleWorks;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.xnrnd.sample.SimpleWorks1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -643,12 +659,14 @@
 		7591696B1C9BF20F00BD4116 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleWorksWidget/SimpleWorksWidget.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SimpleWorksWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tv.xnrnd.sample.SimpleWorks.SimpleWorksWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.xnrnd.sample.SimpleWorks1.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -656,12 +674,14 @@
 		7591696C1C9BF20F00BD4116 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleWorksWidget/SimpleWorksWidget.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SimpleWorksWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tv.xnrnd.sample.SimpleWorks.SimpleWorksWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.xnrnd.sample.SimpleWorks1.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -712,6 +732,7 @@
 				7591696C1C9BF20F00BD4116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

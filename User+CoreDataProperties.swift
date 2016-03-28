@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  SimpleWorks
 //
-//  Created by 심다래 on 2016. 2. 22..
+//  Created by 심다래 on 2016. 3. 11..
 //  Copyright © 2016년 XNRND. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -16,6 +16,6 @@ extension User {
 
     @NSManaged var name: String?
     @NSManaged var phoneNumber: String?
-    @NSManaged var test: NSNumber?
+    @NSManaged var key: String?
 
 }
